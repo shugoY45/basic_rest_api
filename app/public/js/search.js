@@ -11,7 +11,7 @@ const searchModule = (() => {
 
       let body = ""
       for(let i =0; i < result.length; i++) {
-        const user = users[i]
+        const user = result[i]
         body += 
         `<tr>
           <td>${user.id}</td>
@@ -22,7 +22,7 @@ const searchModule = (() => {
           <td>${user.updated_at}</td>
         </tr>`
       }
-      document.getElementById('users-list').innerHTML(body);
+      document.getElementById('users-list').innerHTML = body;
     }
   }
 
